@@ -1,0 +1,21 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    #    password: India@123
+    url: jdbc:mysql://localhost:3306/catalog
+    #    url: jdbc:mysql://mysqldb:3306/catalog
+    username: root
+    password: India@123
+  jpa:
+    hibernate:
+      console:
+        enabled: true
+      ddl-auto: update
+      format_sql: true
+    show-sql: true
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+  profiles:
+    active: local
